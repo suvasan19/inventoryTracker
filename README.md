@@ -1,6 +1,10 @@
 # Inventory Tracker
 
-Author: Suvasan Versions: Ruby: 3.0.3, Rails: 7.0.2
+Made for the Shopify Back-end Developer Challenge
+
+Author: Suvasan Krishnasamy
+
+Versions: Ruby: 3.0.3, Rails: 7.0.2
 
 To use this application, from the root page, click on View Items to see a list of all items in the inventory along with the assocated data for those items. Here you can add new items and click the "View" at the end of each table row to show each specific item.
 

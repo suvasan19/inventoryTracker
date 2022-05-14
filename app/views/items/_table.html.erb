@@ -1,0 +1,50 @@
+<div id="items">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>
+          Name
+        </td>
+        <td>
+          Customer
+        </td>
+        <td>
+          Date
+        </td>
+        <td>
+          Cost
+        </td>
+        <td>
+          Location
+        </td>
+        <td>
+          View
+        </td>
+      </tr>
+    </thead>
+    <% items.each do |item| %>
+      <tbody>
+        <tr>
+          <td>
+            <%= item.name %>
+          </td>
+          <td>
+            <%= item.customer %>
+          </td>
+          <td>
+            <%= item.date %>
+          </td>
+          <td>
+            $<%= item.cost %>
+          </td>
+          <td>
+            <%= item.location_id.present? ? Location.find(item.location_id).name : "No Location" %>
+          </td>
+          <td>
+            <%= link_to "View", item, class:"btn btn-secondary" %>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+<div id="<%= dom_id @item %>" class="mt-2">
+  <p>
+    <strong>Name:</strong>
+    <%= @item.name %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= @item.date %>
+  </p>
+
+  <p>
+    <strong>Customer:</strong>
+    <%= @item.customer %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= @item.location.present? ? @item.location.name : "No Associated Location" %>
+  </p>
+
+  <p>
+    <strong>Cost:</strong>
+    $<%= @item.cost %>
+  </p>
+
+</div>
+
+<div>
+  <%= link_to "Back", items_path, class: "btn btn-primary p-1" %>
+  <%= link_to "Edit", edit_item_path(@item), class: "btn btn-warning p-1" %>
+  <%= button_to "Delete", @item, method: :delete, class: "btn btn-danger mt-1" %>
+</div>

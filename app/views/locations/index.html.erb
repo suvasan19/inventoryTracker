@@ -1,0 +1,36 @@
+<h1>Locations</h1>
+
+<div id="locations">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>
+          Name
+        </td>
+        <td>
+          Address
+        </td>
+        <td>
+          View
+        </td>
+      </tr>
+    </thead>
+    <% @locations.each do |location| %>
+      <tbody>
+        <tr>
+          <td>
+            <%= location.name %>
+          </td>
+          <td>
+            <%= location.address %>
+          </td>
+          <td>
+            <%= link_to "View", location %>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to "Create a New Location", new_location_path,  class:"btn btn-primary" %>

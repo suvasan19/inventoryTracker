@@ -2,5 +2,42 @@
 <p>
     Welcome to the Inventory Tracker
 </p>
+
+<div class="accordion mb-2" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Instructions
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <p>
+            To use this application, from the root page, click on View Items to see a list of all items in the inventory along with the assocated data for those items. Here you can add new items and click the "View" at the end of each table row to show each specific item.
+        </p>
+
+        <p>
+            When creating new items, you can enter into all fields and the location field will only hold locations that have been made. You may create an item without a location.
+        </p>
+
+        <p>
+            When showing specific items, you can use "Edit" to edit and "Delete" to delete the elements.
+        </p>
+
+        <p>
+            You can return to the index page with the title in the navbar.
+        </p>
+
+        <p>
+            From here, you can see the Locations that inventory items can be associated to. Similar to Items, you will see a list of locations and associated attributes. You can also create new Locations and show each specific Location. When viewing specific locations, you can view the associated Inventory Items, edit and delete locations.
+        </p>
+
+        <p>
+            When deleting a Location, any associated inventory items will have their location's set to nil.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <%= link_to "View Items", items_path, class: "btn btn-primary"%>
 <%= link_to "View Locations", locations_path, class: "btn btn-primary"%>

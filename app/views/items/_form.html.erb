@@ -33,10 +33,10 @@
 
   <div>
     <%= form.label :location, style: "display: block" %>
-    <%= form.select :location_id, options_from_collection_for_select(Location.all, :id, :name), :include_blank => true %>
+    <%= form.select :location_id, options_from_collection_for_select(Location.all, :id, :name, item.location_id), :include_blank => true %>
   </div>
 
   <div class="pt-2">
-    <%= form.submit%>
+    <%= form.submit "Submit", :class=>'btn btn-success' %>
   </div>
 <% end %>

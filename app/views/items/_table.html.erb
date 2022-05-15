@@ -41,7 +41,7 @@
             <%= item.location_id.present? ? Location.find(item.location_id).name : "No Location" %>
           </td>
           <td>
-            <%= link_to "View", item, class:"btn btn-secondary" %>
+            <%= link_to "View", item, class:"btn btn-light" %>
           </td>
         </tr>
       </tbody>
